@@ -54,8 +54,10 @@ $result = $parser->rawResponse();
 
 
 // Dirty output replace by you own
-echo "<pre>";
-print_r( $result );
-echo "</pre>";
+//echo "<pre>";
+//print_r( $result );
+//echo "</pre>";
+
+echo utf8_encode( $result );
 
 ?>
