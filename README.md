@@ -17,8 +17,10 @@ Get last version from github.com by following command:
 
 Git
 		git clone git://github.com/vaddi/former.git
+
 Http
 		git clone https://github.com/vaddi/former.git
+
 
 
 ## Usage ##
@@ -27,31 +29,40 @@ Http
 Create a instance of the Parser class
 		$parser = new Parser( $url );
 
+
 # simple functions #
 Get the raw response
 		$parser->rawResponse();
 
+
 Get Elements by node name (table)
 		$parser->getByNode( 'table' );
+
 
 Get Element by css id (example)
 		$parser->getById( 'example' );
 
+
 Get Elements by node name and css class (node = tbody, class = example )
 		$parser->getByNodeClass( 'tbody', 'example' );
+
 
 # advanced functions #
 Get element by node name, node attribute value (null or '*' for all) and a node attribute name (class, href, rel, etc.)
 		$parser->getByNodeAttribute( 'td', 'time', 'class' );
 
+
 Get all href's inside of a td element
 		$parser->getByNodeAttribute( 'td', '*', 'href' );
+
 
 Get all image (img) sources (src)
 		$parser->getByNodeAttribute( 'img', '*', 'src' );
 
+
 Get action url from each form
 		$parser->getByNodeAttribute( 'form', '*', 'action' )
+
 
 See index.php and class/Parser.php for more examples and settings
 
